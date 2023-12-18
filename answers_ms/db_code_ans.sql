@@ -5,7 +5,7 @@ CREATE TABLE answers(
     votes INTEGER NOT NULL
 );
 
--- Fill from pandas csv
+-- Fill from pandas .csv
 
 CREATE TABLE outbox(
     id SERIAL PRIMARY KEY UNIQUE NOT NULL,
