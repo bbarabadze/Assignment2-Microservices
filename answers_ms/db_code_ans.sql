@@ -1,0 +1,14 @@
+CREATE TABLE answers(
+    id SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    q_id CHAR(6) NOT NULL,
+    text VARCHAR(1000) DEFAULT 'No Answer',
+    votes INTEGER NOT NULL
+);
+
+-- Fill from pandas csv
+
+CREATE TABLE outbox(
+    id SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'pending',
+    "datetime" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
